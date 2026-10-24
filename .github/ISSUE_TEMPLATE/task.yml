@@ -1,0 +1,47 @@
+name: Agent task
+description: A scoped, independently verifiable task for one worker
+title: "[Task] "
+labels: ["agent:ready"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should change and why?
+    validations:
+      required: true
+  - type: textarea
+    id: paths
+    attributes:
+      label: Allowed paths
+      description: One repository-relative file or directory per line. No globs. Use '.' for exclusive repository-wide work.
+      placeholder: |
+        web/src/home/
+        web/tests/home/
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Depends on
+      description: Issue numbers that must be completed first, or 'none'.
+      value: none
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Observable completion conditions and required tests.
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Expected effort
+      options:
+        - Small
+        - Medium
+        - Large (split before dispatch)
+    validations:
+      required: true

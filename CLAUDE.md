@@ -1,0 +1,1 @@
+Read and follow [AGENTS.md](AGENTS.md) for shared repository and coordination rules, then your assigned GitHub issue. Use the existing assigned workspace; do not create an additional worktree or launch extra workers implicitly.

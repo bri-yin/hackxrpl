@@ -1,0 +1,7 @@
+{
+  "repository": "bri-yin/hackxrpl",
+  "remote": "origin",
+  "base": "main",
+  "checks": [["python3", "-m", "unittest", "discover", "-s", "tests", "-v"]],
+  "required_checks": ["coordination"]
+}
